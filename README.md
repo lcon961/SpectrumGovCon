@@ -10,8 +10,12 @@ services.html    Services
 about.html       About
 contact.html     Contact (demo form, no backend yet)
 css/styles.css   All site styles
-js/main.js       Mobile nav toggle + demo form handling
+js/main.js       Full-screen nav overlay toggle + demo form handling
 ```
+
+## Design language
+
+Dark navy background, Montserrat (light-weight headings, uppercase tracked labels), an orange-red accent, pill-shaped uppercase buttons, and numbered "/ 01" divider-grid sections in place of card shadows — with a full-screen overlay menu (triggered by the "Menu" hamburger) instead of inline nav links.
 
 ## Local preview
 
@@ -35,5 +39,5 @@ Then visit `http://localhost:8000`.
 
 - **Contact form**: currently a front-end demo only. Connect it to a form backend such as [Formspree](https://formspree.io) or [Netlify Forms](https://www.netlify.com/products/forms/) to actually receive submissions, or point it at your CRM.
 - **Content**: swap placeholder copy, phone number, email, and stats in `index.html`, `services.html`, `about.html`, and `contact.html` for real details.
-- **Branding**: colors and fonts are defined as CSS variables at the top of `css/styles.css` — update `--navy-900` and `--gold-500` to adjust the palette, or swap in a logo image in place of the "SG" text mark.
+- **Branding**: colors and fonts are defined as CSS variables at the top of `css/styles.css` — update `--navy-900` and `--accent` to adjust the palette, or swap in a logo image in place of the "SG" text mark.
 - **Custom domain**: if you have one, add a `CNAME` file with your domain and configure DNS per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).

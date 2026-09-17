@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SpectrumGovCon | Federal Contracting &amp; GovCon Consulting</title>
   <meta name="description" content="SpectrumGovCon helps small and mid-size businesses win and manage federal contracts — proposal development, capture strategy, compliance, and contract vehicle support." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a1f3d%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23c9a24b%22 font-family=%22Arial%22 font-weight=%22bold%22>S</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a1a2f%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23ff471d%22 font-family=%22Arial%22 font-weight=%22bold%22>S</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -16,21 +19,31 @@
         <span class="brand-mark">SG</span>
         Spectrum<span>GovCon</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="mobile-only-cta"><a href="contact.html" class="btn btn-primary">Request a Consultation</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+      </button>
     </nav>
   </header>
+
+  <div class="nav-overlay">
+    <div class="nav-overlay-top">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">SG</span>
+        Spectrum<span>GovCon</span>
+      </a>
+      <button class="nav-close" aria-label="Close navigation">&times;</button>
+    </div>
+    <div class="nav-overlay-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-overlay-footer">
+      <a href="contact.html" class="btn btn-primary">Request a Consultation <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
 
   <main>
     <!-- Hero -->
@@ -45,13 +58,25 @@
             vehicle management. We handle the complexity so you can focus on delivery.
           </p>
           <div class="hero-actions">
-            <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+            <a href="contact.html" class="btn btn-primary">Request a Consultation <span class="arrow">&rarr;</span></a>
             <a href="services.html" class="btn btn-outline">Explore Our Services</a>
           </div>
-          <div class="hero-stats">
-            <div><strong>50+</strong><span>Proposals Supported</span></div>
-            <div><strong>$120M+</strong><span>Contract Value Pursued</span></div>
-            <div><strong>15+</strong><span>Federal Agencies Engaged</span></div>
+          <div class="stat-grid">
+            <div class="stat-cell">
+              <div class="stat-label">01</div>
+              <strong>50+</strong>
+              <p>Proposals Supported</p>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-label">02</div>
+              <strong>$120M+</strong>
+              <p>Contract Value Pursued</p>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-label">03</div>
+              <strong>15+</strong>
+              <p>Federal Agencies Engaged</p>
+            </div>
           </div>
         </div>
         <div class="hero-panel">
@@ -88,12 +113,13 @@
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">What We Do</span>
-          <h2>End-to-end GovCon advisory</h2>
+          <h2>End-to-end <strong>GovCon</strong> advisory</h2>
           <p>Practical, hands-on support at every stage of the federal contracting lifecycle.</p>
         </div>
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-icon">01</div>
+        <div class="divide-grid">
+          <div class="divide-item">
+            <div class="divide-num">/ 01</div>
+            <div class="divide-icon">&rarr;</div>
             <h3>Capture &amp; Business Development</h3>
             <p>Identify the right opportunities and build a pipeline strategy aligned to your capabilities.</p>
             <ul>
@@ -102,8 +128,9 @@
               <li>Pipeline &amp; pursuit strategy</li>
             </ul>
           </div>
-          <div class="card">
-            <div class="card-icon">02</div>
+          <div class="divide-item">
+            <div class="divide-num">/ 02</div>
+            <div class="divide-icon">&rarr;</div>
             <h3>Proposal Development</h3>
             <p>Compliant, compelling proposals built around evaluator priorities and win themes.</p>
             <ul>
@@ -112,8 +139,9 @@
               <li>Pricing &amp; cost volume support</li>
             </ul>
           </div>
-          <div class="card">
-            <div class="card-icon">03</div>
+          <div class="divide-item">
+            <div class="divide-num">/ 03</div>
+            <div class="divide-icon">&rarr;</div>
             <h3>Contract Vehicles &amp; Compliance</h3>
             <p>Get on — and stay on — the right vehicles, with the compliance posture to keep them.</p>
             <ul>
@@ -161,8 +189,8 @@
           <h2>Ready to pursue your next federal contract?</h2>
           <p>Schedule a free introductory call to talk through your goals and how we can help.</p>
           <div class="hero-actions">
-            <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
-            <a href="services.html" class="btn btn-outline">See Our Services</a>
+            <a href="contact.html" class="btn btn-primary">Request a Consultation <span class="arrow">&rarr;</span></a>
+            <a href="services.html" class="btn btn-dark-outline">See Our Services</a>
           </div>
         </div>
       </div>
@@ -171,22 +199,22 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="index.html" style="color:#fff;">
-            <span class="brand-mark">SG</span>
-            Spectrum<span>GovCon</span>
-          </a>
+      <div class="footer-top">
+        <div>
+          <h2>Moving small businesses toward federal wins.</h2>
           <p>Federal contracting advisory for small and mid-size businesses — from first opportunity to contract award.</p>
         </div>
         <div>
-          <h4>Company</h4>
+          <h4>Navigate</h4>
           <ul>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+      </div>
+      <div class="footer-grid">
         <div>
           <h4>Services</h4>
           <ul>
@@ -196,7 +224,7 @@
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4>Headquarters</h4>
           <ul>
             <li><a href="mailto:info@spectrumgovcon.com">info@spectrumgovcon.com</a></li>
             <li><a href="tel:+15555555555">(555) 555-5555</a></li>
