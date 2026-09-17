@@ -1,6 +1,6 @@
 # SpectrumGovCon
 
-Marketing website for SpectrumGovCon, a federal contracting (GovCon) advisory business. Plain HTML/CSS/JS — no build step required.
+Marketing website for SpectrumGovCon, the government contracting (GovCon) practice of Spectrum Careers — outsourced and interim back-office staffing for government contractors. Plain HTML/CSS/JS — no build step required.
 
 ## Structure
 
@@ -15,7 +15,7 @@ js/main.js       Full-screen nav overlay toggle + demo form handling
 
 ## Design language
 
-Dark navy background, Montserrat (light-weight headings, uppercase tracked labels), an orange-red accent, pill-shaped uppercase buttons, and numbered "/ 01" divider-grid sections in place of card shadows — with a full-screen overlay menu (triggered by the "Menu" hamburger) instead of inline nav links.
+Aligned with sibling sites [spectrumcareers.com](https://www.spectrumcareers.com/) and [govconleaderscircle.com](https://govconleaderscircle.com/): light body, deep-navy (`#031e48`) accent bands for the hero/footer/CTA/nav overlay, a blue accent (`#005587` / `#407ec9`, no orange), Playfair Display for headlines, Open Sans for body copy, and numbered "/ 01" divider-grid sections in place of card shadows — with a full-screen overlay menu (triggered by the "Menu" hamburger) instead of inline nav links.
 
 ## Local preview
 
@@ -38,6 +38,6 @@ Then visit `http://localhost:8000`.
 ## Next steps
 
 - **Contact form**: currently a front-end demo only. Connect it to a form backend such as [Formspree](https://formspree.io) or [Netlify Forms](https://www.netlify.com/products/forms/) to actually receive submissions, or point it at your CRM.
-- **Content**: swap placeholder copy, phone number, email, and stats in `index.html`, `services.html`, `about.html`, and `contact.html` for real details.
-- **Branding**: colors and fonts are defined as CSS variables at the top of `css/styles.css` — update `--navy-900` and `--accent` to adjust the palette, or swap in a logo image in place of the "SG" text mark.
+- **Content**: copy is now aligned with SpectrumCareers' real GovCon practice (fractional CFO/Controller, interim staffing, DCAA compliance, Deltek Costpoint/Unanet) and reuses public stats and contact info from spectrumcareers.com/govcon — double-check the phone, email, and address in `contact.html` and the footers are the ones you want published under the SpectrumGovCon domain.
+- **Branding**: colors and fonts are defined as CSS variables at the top of `css/styles.css` — update `--primary` and `--bg-dark` to adjust the palette, or swap in a real logo image in place of the "SG" text mark.
 - **Custom domain**: if you have one, add a `CNAME` file with your domain and configure DNS per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
