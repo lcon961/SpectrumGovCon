@@ -10,12 +10,12 @@ services.html    Services
 about.html       About
 contact.html     Contact (demo form, no backend yet)
 css/styles.css   All site styles
-js/main.js       Full-screen nav overlay toggle + demo form handling
+js/main.js       Mobile nav dropdown toggle + demo form handling
 ```
 
 ## Design language
 
-Aligned with sibling sites [spectrumcareers.com](https://www.spectrumcareers.com/) and [govconleaderscircle.com](https://govconleaderscircle.com/): light body, deep-navy (`#031e48`) accent bands for the hero/footer/CTA/nav overlay, a blue accent (`#005587` / `#407ec9`, no orange), Playfair Display for headlines, Open Sans for body copy, and numbered "/ 01" divider-grid sections in place of card shadows — with a full-screen overlay menu (triggered by the "Menu" hamburger) instead of inline nav links.
+Colors aligned with sibling sites [spectrumcareers.com](https://www.spectrumcareers.com/) and [govconleaderscircle.com](https://govconleaderscircle.com/): light body, deep-navy (`#031e48`) accent bands for the hero/footer/CTA, and a blue accent (`#005587` / `#407ec9`, no orange). Typography and navigation stay close to the original build: Montserrat throughout (light-weight display headings, uppercase tracked labels), numbered "/ 01" divider-grid sections in place of card shadows, and a standard inline nav bar (Home / Services / About / Contact + CTA button) that collapses into a dropdown only below 720px.
 
 ## Local preview
 

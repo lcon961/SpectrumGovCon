@@ -1,27 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const overlay = document.querySelector(".nav-overlay");
-  const openBtn = document.querySelector(".nav-toggle");
-  const closeBtn = document.querySelector(".nav-close");
+  const nav = document.querySelector(".nav");
+  const toggle = document.querySelector(".nav-toggle");
 
-  const openNav = () => {
-    overlay.classList.add("open");
-    openBtn.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden";
-  };
-  const closeNav = () => {
-    overlay.classList.remove("open");
-    openBtn.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-  };
-
-  if (openBtn && overlay) {
-    openBtn.addEventListener("click", openNav);
-    closeBtn?.addEventListener("click", closeNav);
-    overlay.querySelectorAll(".nav-overlay-links a").forEach((link) => {
-      link.addEventListener("click", closeNav);
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeNav();
+
+    nav.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => nav.classList.remove("open"));
     });
   }
 
