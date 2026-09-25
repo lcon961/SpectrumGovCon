@@ -20,13 +20,15 @@ Colors aligned with sibling sites [spectrumcareers.com](https://www.spectrumcare
 
 ## Local preview
 
-Open `index.html` directly in a browser, or serve it locally:
+Internal links use clean, root-relative URLs (`/`, `/about`, `/services#cfo`) with no `.html`. GitHub Pages maps `/about` to `about.html` automatically, so the files themselves keep their `.html` names.
+
+Because of that, opening `index.html` straight from disk shows each page fine but the nav links won't resolve. To click through locally, use a static server that supports clean URLs, e.g.:
 
 ```bash
-python -m http.server 8000
+npx serve .
 ```
 
-Then visit `http://localhost:8000`.
+Then visit the URL it prints (usually `http://localhost:3000`).
 
 ## Deploying to GitHub Pages
 
