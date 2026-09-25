@@ -152,6 +152,16 @@ p { margin: 0 0 16px; color: var(--ink-body); }
 }
 .btn-outline:hover { border-color: var(--on-dark); background: rgba(244,247,251,0.08); }
 
+/* "Give Us a Call": label and number share one grid cell so the button
+   keeps the width of the longer text; hover/focus cross-fades to the number. */
+.btn-call { display: inline-grid; place-items: center; }
+.btn-call > span { grid-area: 1 / 1; transition: opacity 0.2s ease, transform 0.2s ease; }
+.btn-call .call-number { opacity: 0; transform: translateY(6px); letter-spacing: 0.06em; }
+.btn-call:hover .call-label,
+.btn-call:focus-visible .call-label { opacity: 0; transform: translateY(-6px); }
+.btn-call:hover .call-number,
+.btn-call:focus-visible .call-number { opacity: 1; transform: translateY(0); }
+
 .btn-dark-outline {
   background: transparent;
   color: var(--primary);
@@ -287,12 +297,16 @@ p { margin: 0 0 16px; color: var(--ink-body); }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 48px;
   align-items: center;
 }
 
 .hero .lede { max-width: 52ch; }
+
+/* Three CTAs share one row in the hero, so tighten them slightly */
+.hero .hero-actions { gap: 12px; }
+.hero .hero-actions .btn { padding: 15px 18px; letter-spacing: 0.06em; }
 
 .hero-actions {
   display: flex;
