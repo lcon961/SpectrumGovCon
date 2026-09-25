@@ -11,6 +11,7 @@ about.html       About
 contact.html     Contact (demo form, no backend yet)
 css/styles.css   All site styles
 js/main.js       Mobile nav dropdown toggle + demo form handling
+videos/hero.mp4  Home hero background video (montage of 4 stock clips; raw clips are gitignored)
 ```
 
 ## Design language
@@ -36,6 +37,8 @@ Then visit `http://localhost:8000`.
 5. GitHub will publish the site at `https://<username>.github.io/SpectrumGovCon/` within a few minutes.
 
 ## Next steps
+
+- **Hero background video**: drop a looping clip at `videos/hero.mp4` and the home page hero plays it muted behind a navy overlay. Keep it short (10–20s), 1920×1080 or smaller, no audio track, and under ~5 MB. Until the file exists (or if a visitor prefers reduced motion), the plain navy gradient shows.
 
 - **Contact form**: currently a front-end demo only. Connect it to a form backend such as [Formspree](https://formspree.io) or [Netlify Forms](https://www.netlify.com/products/forms/) to actually receive submissions, or point it at your CRM.
 - **Content**: copy is now aligned with SpectrumCareers' real GovCon practice (fractional CFO/Controller, interim staffing, DCAA compliance, Deltek Costpoint/Unanet) and reuses public stats and contact info from spectrumcareers.com/govcon — double-check the phone, email, and address in `contact.html` and the footers are the ones you want published under the SpectrumGovCon domain.

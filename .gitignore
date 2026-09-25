@@ -3,3 +3,7 @@ Thumbs.db
 node_modules/
 *.log
 .claude/
+
+# Raw source clips for the hero video; only the encoded hero.mp4 is published
+videos/*
+!videos/hero.mp4
