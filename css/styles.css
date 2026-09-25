@@ -769,6 +769,21 @@ p { margin: 0 0 16px; color: var(--ink-body); }
 
 .form-note { font-size: 0.8rem; color: var(--ink-muted); margin-top: 4px; }
 
+.form-status {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 4px;
+  border-left: 3px solid;
+  font-size: 0.9rem;
+}
+.form-status.success { background: #eaf5ee; border-color: #2e8b57; color: #1d5c39; }
+.form-status.error { background: #fdeeee; border-color: #c0392b; color: #8a2a20; }
+
+/* Honeypot spam trap: off-screen for people, still in the DOM for bots */
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+
 /* ---- Footer ---- */
 .site-footer {
   padding: 88px 0 32px;

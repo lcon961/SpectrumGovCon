@@ -8,9 +8,9 @@ Marketing website for SpectrumGovCon, the government contracting (GovCon) practi
 index.html       Home
 services.html    Services
 about.html       About
-contact.html     Contact (demo form, no backend yet)
+contact.html     Contact (form posts to Gravity Forms on spectrumcareers.com)
 css/styles.css   All site styles
-js/main.js       Mobile nav dropdown toggle + demo form handling
+js/main.js       Mobile nav toggle, contact form submission, specialty preselect
 videos/hero.mp4  Home hero background video (montage of 4 stock clips; raw clips are gitignored)
 ```
 
@@ -42,7 +42,7 @@ Then visit the URL it prints (usually `http://localhost:3000`).
 
 - **Hero background video**: drop a looping clip at `videos/hero.mp4` and the home page hero plays it muted behind a navy overlay. Keep it short (10–20s), 1920×1080 or smaller, no audio track, and under ~5 MB. Until the file exists (or if a visitor prefers reduced motion), the plain navy gradient shows.
 
-- **Contact form**: currently a front-end demo only. Connect it to a form backend such as [Formspree](https://formspree.io) or [Netlify Forms](https://www.netlify.com/products/forms/) to actually receive submissions, or point it at your CRM.
+- **Contact form**: submits to Gravity Forms form #47 on spectrumcareers.com through the Gravity Forms REST API (`/wp-json/gf/v2/forms/47/submissions`, no API key needed). Field mapping lives in `js/main.js`: first name → 1, last name → 2, email → 3, company → 5, phone → 6, message → 8 (the "How can we assist?" choice is prepended to the message, since form #47 has no field for it). If fields are added or renumbered on the Gravity Forms side, update that mapping. Notifications, entries, and any downstream CRM/Clay integration are configured in WordPress. A hidden honeypot field drops obvious bot submissions before they are sent.
 - **Content**: copy is now aligned with SpectrumCareers' real GovCon practice (fractional CFO/Controller, interim staffing, DCAA compliance, Deltek Costpoint/Unanet) and reuses public stats and contact info from spectrumcareers.com/govcon — double-check the phone, email, and address in `contact.html` and the footers are the ones you want published under the SpectrumGovCon domain.
 - **Branding**: colors and fonts are defined as CSS variables at the top of `css/styles.css` — update `--primary` and `--bg-dark` to adjust the palette, or swap in a real logo image in place of the "SG" text mark.
 - **Custom domain**: if you have one, add a `CNAME` file with your domain and configure DNS per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).

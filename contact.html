@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
 </head>
 <body>
 
@@ -85,25 +85,30 @@
             <h3>Connect with our GovCon team</h3>
             <p class="lede" style="margin-bottom:24px;">We'll send over vetted candidates, ready to plug into your team.</p>
             <form id="contact-form">
+              <!-- Submits to Gravity Forms form #47 on spectrumcareers.com (see js/main.js) -->
               <div class="form-row">
                 <div class="field">
-                  <label for="name">Full name</label>
-                  <input type="text" id="name" name="name" required />
+                  <label for="first-name">First name</label>
+                  <input type="text" id="first-name" name="first_name" autocomplete="given-name" required />
                 </div>
                 <div class="field">
-                  <label for="company">Company</label>
-                  <input type="text" id="company" name="company" />
+                  <label for="last-name">Last name</label>
+                  <input type="text" id="last-name" name="last_name" autocomplete="family-name" required />
                 </div>
               </div>
               <div class="form-row">
                 <div class="field">
                   <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required />
+                  <input type="email" id="email" name="email" autocomplete="email" required />
                 </div>
                 <div class="field">
                   <label for="phone">Phone</label>
-                  <input type="tel" id="phone" name="phone" />
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" />
                 </div>
+              </div>
+              <div class="field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" autocomplete="organization" />
               </div>
               <div class="field">
                 <label for="interest">How can we assist?</label>
@@ -130,9 +135,13 @@
                 <label for="message">Tell us about your team's needs</label>
                 <textarea id="message" name="message" placeholder="A bit about your business, roles you're looking to fill, or timeline..."></textarea>
               </div>
+              <!-- Spam trap: hidden from people, bots tend to fill it in -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+              </div>
               <button type="submit" class="btn btn-primary">Submit <span class="arrow">&rarr;</span></button>
-              <p class="form-status form-note" style="display:none;"></p>
-              <p class="form-note">This form is a demo and isn't connected to a backend yet — see the README for how to wire it up.</p>
+              <p class="form-status" role="status" aria-live="polite" hidden></p>
             </form>
           </div>
         </div>
@@ -183,6 +192,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>
