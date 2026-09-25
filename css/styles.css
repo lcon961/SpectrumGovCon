@@ -312,16 +312,39 @@ p { margin: 0 0 16px; color: var(--ink-body); }
 .hero-panel h3 { color: var(--on-dark); font-family: var(--font-sans); font-size: 0.95rem; margin-bottom: 20px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
 
 .hero-panel ul li {
-  display: flex;
-  gap: 14px;
-  padding: 12px 0;
   border-bottom: 1px solid var(--border-dark-soft);
-  color: var(--on-dark-body);
   font-size: 0.92rem;
   font-weight: 400;
 }
 .hero-panel ul li:last-child { border-bottom: none; }
+.hero-panel ul li a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 10px;
+  margin: 0 -10px;
+  border-radius: 4px;
+  color: var(--on-dark-body);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.hero-panel ul li a:hover,
+.hero-panel ul li a:focus-visible {
+  background: rgba(244,247,251,0.08);
+  color: var(--on-dark);
+}
+.hero-panel ul li a:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
+.hero-panel ul li .go {
+  margin-left: auto;
+  color: var(--accent-blue);
+  opacity: 0.75;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.hero-panel ul li a:hover .go,
+.hero-panel ul li a:focus-visible .go { opacity: 1; transform: translateX(3px); }
+.hero-panel ul li a:hover .check,
+.hero-panel ul li a:focus-visible .check { background: var(--accent-blue); color: #fff; }
 .hero-panel ul li .check {
+  transition: background 0.15s ease, color 0.15s ease;
   flex-shrink: 0;
   width: 20px;
   height: 20px;
@@ -463,6 +486,41 @@ p { margin: 0 0 16px; color: var(--ink-body); }
   border-radius: 50%;
   background: var(--primary);
 }
+
+/* ---- Specialty link cards (services page + specialty pages) ---- */
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.specialty-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--ink-body);
+  transition: background 0.2s ease;
+}
+.section-alt .specialty-card { background: transparent; }
+.specialty-card h3 { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; transition: color 0.15s ease; }
+.specialty-card p { font-size: 0.88rem; margin-bottom: 20px; }
+.specialty-card .divide-num { margin-bottom: 14px; }
+.specialty-card .more {
+  margin-top: auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.specialty-card .arrow { display: inline-block; transition: transform 0.2s ease; }
+.specialty-card:hover { background: var(--bg-alt); }
+.section-alt .specialty-card:hover { background: var(--bg); }
+.specialty-card:hover h3 { color: var(--primary); }
+.specialty-card:hover .arrow { transform: translateX(3px); }
 
 /* ---- Process steps ---- */
 .steps {
@@ -717,6 +775,7 @@ p { margin: 0 0 16px; color: var(--ink-body); }
   .hero-grid { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; gap: 32px; }
   .divide-grid { grid-template-columns: 1fr 1fr; }
+  .specialty-grid { grid-template-columns: 1fr 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
@@ -752,7 +811,7 @@ p { margin: 0 0 16px; color: var(--ink-body); }
   .nav.open .mobile-only-cta .btn { width: 100%; }
 
   .hero { padding: 72px 0 80px; }
-  .divide-grid, .steps, .stat-grid { grid-template-columns: 1fr; }
+  .divide-grid, .specialty-grid, .steps, .stat-grid { grid-template-columns: 1fr; }
   .section { padding: 72px 0; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }

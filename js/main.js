@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("#contact-form");
   if (form) {
+    // Specialty pages link here as /contact?interest=<slug>; preselect that option.
+    const interest = new URLSearchParams(window.location.search).get("interest");
+    const select = form.querySelector("#interest");
+    if (interest && select && select.querySelector(`option[value="${CSS.escape(interest)}"]`)) {
+      select.value = interest;
+    }
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const status = form.querySelector(".form-status");

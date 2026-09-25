@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
 </head>
 <body>
 
@@ -108,9 +108,21 @@
               <div class="field">
                 <label for="interest">How can we assist?</label>
                 <select id="interest" name="interest">
-                  <option>Fractional CFO</option>
-                  <option>Fractional Controller</option>
-                  <option>Interim / Outsourced Staffing</option>
+                  <optgroup label="Leadership &amp; staffing">
+                    <option>Fractional CFO</option>
+                    <option>Fractional Controller</option>
+                    <option>Interim / Outsourced Staffing</option>
+                  </optgroup>
+                  <optgroup label="Specialties">
+                    <option value="accounting-finance">GovCon Accounting &amp; Finance</option>
+                    <option value="pricing-procurement">Pricing &amp; Procurement</option>
+                    <option value="program-controls">Project &amp; Program Controls</option>
+                    <option value="capture-proposal">Capture &amp; Proposal Management</option>
+                    <option value="contracts-administration">Contracts Administration</option>
+                    <option value="deltek-costpoint-unanet">Deltek Costpoint &amp; Unanet</option>
+                    <option value="hr-administrative">Human Resources &amp; Administrative</option>
+                    <option value="compliance-internal-controls">Internal Controls &amp; Compliance</option>
+                  </optgroup>
                   <option>Not sure yet — general inquiry</option>
                 </select>
               </div>
@@ -152,6 +164,7 @@
             <li><a href="/services#cfo">Fractional CFO</a></li>
             <li><a href="/services#controller">Fractional Controller</a></li>
             <li><a href="/services#interim">Interim Solutions</a></li>
+            <li><a href="/services#specialties">All Specialties &rarr;</a></li>
           </ul>
         </div>
         <div>
@@ -170,6 +183,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
