@@ -9,6 +9,11 @@ index.html       Home
 services.html    Services
 about.html       About
 contact.html     Contact (form posts to Gravity Forms on spectrumcareers.com)
+defense-aerospace.html, technology-it-services.html, healthcare.html,
+logistics.html, professional-services.html
+                 Industry pages (linked from the home page industries strip)
+pricing-procurement.html, program-controls.html, contracts-administration.html
+                 Redirect stubs from old specialty URLs to their renamed pages
 css/styles.css   All site styles
 js/main.js       Mobile nav toggle, contact form submission, specialty preselect
 videos/hero.mp4  Home hero background video (montage of 4 stock clips; raw clips are gitignored)
