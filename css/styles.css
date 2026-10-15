@@ -304,9 +304,19 @@ p { margin: 0 0 16px; color: var(--ink-body); }
 
 .hero .lede { max-width: 52ch; }
 
-/* Three CTAs share one row in the hero, so tighten them slightly */
-.hero .hero-actions { gap: 12px; }
-.hero .hero-actions .btn { padding: 15px 18px; letter-spacing: 0.06em; }
+/* Hero CTAs: a tall primary button beside a stack of the two secondary ones */
+.hero .hero-actions {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  gap: 12px;
+}
+.hero .hero-actions .btn { padding: 15px 22px; letter-spacing: 0.06em; }
+.hero .hero-actions .btn-primary {
+  grid-row: span 2;
+  padding: 15px 34px;
+  font-size: 0.9rem;
+}
 
 .hero-actions {
   display: flex;
@@ -901,4 +911,10 @@ p { margin: 0 0 16px; color: var(--ink-body); }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .contact-info-card, .form-card { padding: 32px 24px; }
+}
+
+/* Too narrow for the side-by-side hero CTAs: stack all three full width */
+@media (max-width: 560px) {
+  .hero .hero-actions { grid-template-columns: 1fr; }
+  .hero .hero-actions .btn-primary { grid-row: auto; padding: 22px 24px; }
 }
