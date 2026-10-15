@@ -115,7 +115,7 @@ p { margin: 0 0 16px; color: var(--ink-body); }
   color: var(--on-dark);
 }
 .hero .eyebrow, .page-header .eyebrow { color: var(--accent-blue); }
-.hero h1 strong { color: #7fb2ec; }
+.hero h1 strong, .page-header h1 strong { color: #7fb2ec; }
 .hero p, .page-header p, .cta-band p { color: var(--on-dark-body); }
 
 /* ---- Buttons ---- */
@@ -665,6 +665,8 @@ p { margin: 0 0 16px; color: var(--ink-body); }
 }
 .page-header .container { position: relative; }
 .page-header h1 { margin-bottom: 12px; }
+.page-header .lede { max-width: 62ch; }
+.page-header .stat-grid { margin-top: 40px; }
 .breadcrumb {
   font-size: 0.78rem;
   letter-spacing: 0.05em;
