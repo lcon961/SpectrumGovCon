@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const GF_ENDPOINT = "https://www.spectrumcareers.com/wp-json/gf/v2/forms/47/submissions";
     const GF_FIELD_LABELS = { 1: "First name", 2: "Last name", 3: "Email", 5: "Company", 6: "Phone", 8: "Message" };
     const SUCCESS_MSG = "Thanks! Your message is on its way. A member of our GovCon team will reply within one business day.";
-    const FAILURE_MSG = "Sorry, something went wrong sending your message. Please email info@spectrumgovcon.com or call (703) 738-1201.";
+    const FAILURE_MSG = "Sorry, something went wrong sending your message. Please email info@spectrum-govcon.com or call (703) 738-1201.";
 
     const status = form.querySelector(".form-status");
     const button = form.querySelector('button[type="submit"]');
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = [
         interestLabel && `How can we assist: ${interestLabel}`,
         val("message"),
-        "Submitted via spectrumgovcon.com/contact",
+        "Submitted via spectrum-govcon.com/contact",
       ].filter(Boolean).join("\n\n");
 
       const payload = {

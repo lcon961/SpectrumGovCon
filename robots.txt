@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spectrumgovcon.com/sitemap.xml
+Sitemap: https://spectrum-govcon.com/sitemap.xml
